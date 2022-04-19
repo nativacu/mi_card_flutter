@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       backgroundColor: Colors.teal,
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
               radius: 50,
@@ -41,52 +42,47 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '+1 (829)-123-4456',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Hack',
-                        fontSize: 16,
-                      ),
-                    )
-                  ],
-                )),
-            Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'demo@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Hack',
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
-                ))
+            SizedBox(
+              height: 20,
+              width: 150,
+              child: Divider(
+                color: Colors.teal.shade100,
+              ),
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  '+1 (829)-123-4456',
+                  style: TextStyle(
+                    color: Colors.teal.shade900,
+                    fontFamily: 'Hack',
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  'demo@gmail.com',
+                  style: TextStyle(
+                    color: Colors.teal.shade900,
+                    fontFamily: 'Hack',
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
